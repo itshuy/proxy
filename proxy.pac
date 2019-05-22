@@ -1,8 +1,8 @@
-// PAC file created on Wed, 22 May 2019 00:33:24 GMT
+// PAC file created on Wed, 22 May 2019 00:39:29 GMT
 
 var normal = "DIRECT";
-var proxy = "easylist_pac -d /scripts/github/proxy/";
-var blackhole_ip_port = "DIRECT";
+var proxy = "easylist_pac -d /scripts/github/proxy/ -p DIRECT";
+var blackhole_ip_port = "PROXY DIRECT";
 var blackhole = "PROXY " + blackhole_ip_port;
 
 // Too many rules (>~ 10k) bog down the browser; make reasonable exclusions here:
