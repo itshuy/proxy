@@ -1,4 +1,4 @@
-//Wed, 22 May 2019 14:19:11 GMT
+//Wed, 22 May 2019 14:30:42 GMT
 //easylist_pac -d /scripts/github/proxy/
 var normal = "DIRECT";
 var proxy = "DIRECT";                  // e.g. 127.0.0.1:3128
@@ -6,79 +6,9 @@ var blackhole_ip_port = "127.0.0.1:8119";    // on iOS a working blackhole requi
 var blackhole = "PROXY " + blackhole_ip_port;
 
 // 
-// 71 rules:
-var good_da_host_JSON = { "apple.com": null,
-"icloud.com": null,
-"apple-dns.net": null,
-"swcdn.apple.com": null,
-"init.itunes.apple.com": null,
-"init-cdn.itunes-apple.com.akadns.net": null,
-"itunes.apple.com.edgekey.net": null,
-"setup.icloud.com": null,
-"p32-escrowproxy.icloud.com": null,
-"p32-escrowproxy.fe.apple-dns.net": null,
-"keyvalueservice.icloud.com": null,
-"keyvalueservice.fe.apple-dns.net": null,
-"p32-bookmarks.icloud.com": null,
-"p32-bookmarks.fe.apple-dns.net": null,
-"p32-ckdatabase.icloud.com": null,
-"p32-ckdatabase.fe.apple-dns.net": null,
-"configuration.apple.com": null,
-"configuration.apple.com.edgekey.net": null,
-"mesu.apple.com": null,
-"mesu-cdn.apple.com.akadns.net": null,
-"mesu.g.aaplimg.com": null,
-"gspe1-ssl.ls.apple.com": null,
-"gspe1-ssl.ls.apple.com.edgekey.net": null,
-"api-glb-bos.smoot.apple.com": null,
-"query.ess.apple.com": null,
-"query-geo.ess-apple.com.akadns.net": null,
-"query.ess-apple.com.akadns.net": null,
-"setup.fe.apple-dns.net": null,
-"gsa.apple.com": null,
-"gsa.apple.com.akadns.net": null,
-"icloud-content.com": null,
-"usbos-edge.icloud-content.com": null,
-"usbos.ce.apple-dns.net": null,
-"lcdn-locator.apple.com": null,
-"lcdn-locator.apple.com.akadns.net": null,
-"lcdn-locator-usuqo.apple.com.akadns.net": null,
-"cl1.apple.com": null,
-"cl2.apple.com": null,
-"cl3.apple.com": null,
-"cl4.apple.com": null,
-"cl5.apple.com": null,
-"cl1-cdn.origin-apple.com.akadns.net": null,
-"cl2-cdn.origin-apple.com.akadns.net": null,
-"cl3-cdn.origin-apple.com.akadns.net": null,
-"cl4-cdn.origin-apple.com.akadns.net": null,
-"cl5-cdn.origin-apple.com.akadns.net": null,
-"cl1.apple.com.edgekey.net": null,
-"cl2.apple.com.edgekey.net": null,
-"cl3.apple.com.edgekey.net": null,
-"cl4.apple.com.edgekey.net": null,
-"cl5.apple.com.edgekey.net": null,
-"xp.apple.com": null,
-"xp.itunes-apple.com.akadns.net": null,
-"mt-ingestion-service-pv.itunes.apple.com": null,
-"p32-sharedstreams.icloud.com": null,
-"p32-sharedstreams.fe.apple-dns.net": null,
-"p32-fmip.icloud.com": null,
-"p32-fmip.fe.apple-dns.net": null,
-"gsp-ssl.ls.apple.com": null,
-"gsp-ssl.ls-apple.com.akadns.net": null,
-"gsp-ssl.ls2-apple.com.akadns.net": null,
-"gspe35-ssl.ls.apple.com": null,
-"gspe35-ssl.ls-apple.com.akadns.net": null,
-"gspe35-ssl.ls.apple.com.edgekey.net": null,
-"gsp64-ssl.ls.apple.com": null,
-"gsp64-ssl.ls-apple.com.akadns.net": null,
-"mt-ingestion-service-st11.itunes.apple.com": null,
-"mt-ingestion-service-st11.itunes-apple.com.akadns.net": null,
-"microsoft.com": null,
-"mozilla.com": null,
-"mozilla.org": null };
-var good_da_host_exact_flag = 71 > 0 ? true : false;  // test for non-zero number of rules
+// 0 rules:
+var good_da_host_JSON = {  };
+var good_da_host_exact_flag = 0 > 0 ? true : false;  // test for non-zero number of rules
     
 // 0 rules as an efficient NFA RegExp:
 var good_da_host_RegExp = /^$/;
@@ -3590,14 +3520,14 @@ var GoodNetworks_Array = [ "10.0.0.0,     255.0.0.0",
 "127.0.0.0,         255.0.0.0"];
 
 // Apple iAd, Microsoft telemetry
-var GoodNetworks_Exceptions_Array = [ ""];
+var GoodNetworks_Exceptions_Array = [];
 
 // Akamai: 23.64.0.0/14, 23.0.0.0/12, 23.32.0.0/11, 104.64.0.0/10
 
 // Add any bad networks here. Format is network folowed by a comma and
 // optional white space, and then the netmask.
 // From securemecca.com: Adobe marketing cloud, 2o7, omtrdc, Sedo domain parking, flyingcroc, accretive
-var BadNetworks_Array = [ ""];
+var BadNetworks_Array = [];
 
 // block these schemes; use the command line for ftp, rsync, etc. instead
 var bad_schemes_RegExp = RegExp("^(?:ftp|sftp|tftp|ftp-data|rsync|finger|gopher)", "i")
