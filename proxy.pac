@@ -1,56 +1,10 @@
+//Wed, 22 May 2019 03:33:32 GMT
+//easylist_pac -d /scripts/github/proxy/ -p DIRECT
 var normal = "DIRECT";
-var proxy = "Wed, 22 May 2019 03:27:29 GMT";                  // e.g. 127.0.0.1:3128
-var blackhole_ip_port = "easylist_pac -d /scripts/github/proxy/ -p DIRECT";    // on iOS a working blackhole requires return code 200;
+var proxy = "PROXY DIRECT";                  // e.g. 127.0.0.1:3128
+var blackhole_ip_port = "127.0.0.1:8119";    // on iOS a working blackhole requires return code 200;
 var blackhole = "PROXY " + blackhole_ip_port;
 
-// EasyList rules:
-// https://adblockplus.org/filters
-// https://adblockplus.org/filter-cheatsheet
-// https://opnsrce.github.io/javascript-performance-tip-precompile-your-regular-expressions
-// https://adblockplus.org/blog/investigating-filter-matching-algorithms
-// 
-// Strategies to convert EasyList rules to Javascript tests:
-// 
-// In general:
-// 1. Preference for performance over 1:1 EasyList functionality
-// 2. Limit number of rules to ~O(10k) to avoid computational burden on mobile devices
-// 3. Exact matches: use Object hashing (very fast); use efficient NFA RegExp's for all else
-// 4. Divide and conquer specific cases to avoid large RegExp's
-// 5. Based on testing code performance on an iPhone: mobile Safari, Chrome with System Activity Monitor.app
-// 6. Backstop these proxy.pac rules with Privoxy rules and a browser plugin
-// 
-// scheme://host/path?query ; FindProxyForURL(url, host) has full url and host strings
-// 
-// EasyList rules:
-// 
-// || domain anchor
-// 
-// ||host is exact e.g. ||a.b^ ? then hasOwnProperty(hash,host)
-// ||host is wildcard e.g. ||a.* ? then RegExp.test(host)
-// 
-// ||host/path is exact e.g. ||a.b/c? ? then hasOwnProperty(hash,url_path_noquery) [strip ?'s]
-// ||host/path is wildcard e.g. ||a.*/c? ? then RegExp.test(url_path_noquery) [strip ?'s]
-// 
-// ||host/path?query is exact e.g. ||a.b/c?d= ? assume none [handle small number within RegExp's]
-// ||host/path?query is wildcard e.g. ||a.*/c?d= ? then RegExp.test(url)
-// 
-// url parts e.g. a.b^c&d|
-// 
-// All cases RegExp.test(url)
-// Except: |http://a.b. Treat these as domain anchors after stripping the scheme
-// 
-// regex e.g. /r/
-// 
-// All cases RegExp.test(url)
-// 
-// @@ exceptions
-// 
-// Flag as "good" versus "bad" default
-// 
-// Variable name conventions (example that defines the rule):
-// 
-// bad_da_host_exact == bad domain anchor with host/path type, exact matching with Object hash
-// bad_da_host_regex == bad domain anchor with host/path type, RegExp matching
 // 
 // 71 rules:
 var good_da_host_JSON = { "apple.com": null,
