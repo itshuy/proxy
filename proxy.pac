@@ -1,4 +1,4 @@
-//Wed, 22 May 2019 05:22:14 GMT
+//Wed, 22 May 2019 05:46:31 GMT
 //easylist_pac -d /scripts/github/proxy/
 var normal = "DIRECT";
 var proxy = "DIRECT";                  // e.g. 127.0.0.1:3128
