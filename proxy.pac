@@ -1,5 +1,5 @@
-//Thu, 23 May 2019 00:56:37 GMT
-//easylist_pac -d /scripts/github/proxy/ -b 1.1.1.1:53
+//Thu, 23 May 2019 01:08:23 GMT
+//elph -d /scripts/github/proxy/ -b 1.1.1.1:53
 var normal = "DIRECT";
 var proxy = "DIRECT";                  // e.g. 127.0.0.1:3128
 var blackhole_ip_port = "1.1.1.1:53";    // on iOS a working blackhole requires return code 200;
