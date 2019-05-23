@@ -127,7 +127,7 @@ class EasyListPAC:
         xx6 = 'https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers.txt'
         xx7 = 'https://raw.githubusercontent.com/easylist/easylist/master/easylist_adult/adult_adservers_popup.txt'		
         self.download_list = [xx1, xx2, xx3, xx4, xx5, xx6, xx7] + self.extra_easylist_urls
-        self.file_list = []
+		self.file_list = []
         for url in self.download_list:
             fname = os.path.basename(url)
             fname_full = os.path.join(self.easylist_dir, fname)
@@ -680,8 +680,37 @@ else
         #  proxy.pac preamble
         self.calling_command = ' '.join([os.path.basename(sys.argv[0])] + sys.argv[1:])
         self.proxy_pac_preamble = '''\
+// PAC (Proxy Auto Configuration) Filter from EasyList rules
+// 
+// Copyright (C) 2017 by Steven T. Smith <steve dot t dot smith at gmail dot com>, GPL
+// https://github.com/essandess/easylist-pac-privoxy/
+//
 // PAC file created on {}
 // Created with command: {}
+//
+// http://www.gnu.org/licenses/lgpl.txt
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+// If you normally use a proxy, replace "DIRECT" below with
+// "PROXY MACHINE:PORT"
+// where MACHINE is the IP address or host name of your proxy
+// server and PORT is the port number of your proxy server.
+//
+// Influenced in part by code from King of the PAC from http://securemecca.com/pac.html
+
+// Define the blackhole proxy for blocked adware and trackware
 
 var normal = "DIRECT";
 var proxy = "{}";                  // e.g. 127.0.0.1:3128
@@ -713,7 +742,7 @@ var blackhole = "PROXY " + blackhole_ip_port;
 var GoodNetworks_Array = [ "10.0.0.0,     255.0.0.0",
 "172.16.0.0,        255.240.0.0",
 "192.168.0.0,       255.255.0.0",
-"127.0.0.0,         255.0.0.0" ];
+"127.0.0.0,         255.0.0.0"];
 
 // Apple iAd, Microsoft telemetry
 var GoodNetworks_Exceptions_Array = [];
@@ -1397,19 +1426,13 @@ good_da_host_exceptions_exact = []
 
 # ignore any rules following comments with these strings, until the next non-ignorable comment
 commentname_sections_ignore_re = r'(?:{})'.format('|'.join(re.sub(r'([.])','\\.',x) for x in '''\
-poop.de'''.split('\n')))
-
-# include these rules, no matter their priority
-# necessary to include desired rules that fall below the threshold for a reasonably-sized PAC
-# Refs: https://guardianapp.com/ios-app-location-report-sep2018.html
-include_these_good_rules = []
-include_these_bad_rules = [x for x in """\
-/securepubads.
-||poop.com""".split('\n') if not bool(re.search(r'^\s*?(?:#|$)',x))]
-
-# regex's for highly weighted rules
-high_weight_regex_strings = """\
-poop"""
+project-free-tv.li
+vshare.eu
+pencurimovie.ph
+filmlinks4u.is
+Spiegel.de
+bento.de
+opti?m"""
 
 high_weight_regex = [re.compile(x,re.IGNORECASE) for x in high_weight_regex_strings.split('\n') if not bool(re.search(r'^\s*?(?:#|$)',x))]
 
@@ -1418,7 +1441,10 @@ if False:
     badregex_regex_filters = ''  # Accept everything
 else:
     badregex_regex_filters = high_weight_regex_strings + '\n' + '''\
-poop\\.direct'''
+theadtech\\.com
+emxdgt\\.com
+acuityplatform\\.com
+header\\.direct'''
 
 badregex_regex_filters = '\n'.join(x for x in badregex_regex_filters.split('\n') if not bool(re.search(r'^\s*?(?:#|$)',x)))
 badregex_regex_filters_re = re.compile(r'(?:{})'.format('|'.join(badregex_regex_filters.split('\n'))),re.IGNORECASE)
