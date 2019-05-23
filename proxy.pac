@@ -1,4 +1,4 @@
-//Thu, 23 May 2019 01:08:23 GMT
+//Thu, 23 May 2019 01:12:18 GMT
 //elph -d /scripts/github/proxy/ -b 1.1.1.1:53
 var normal = "DIRECT";
 var proxy = "DIRECT";                  // e.g. 127.0.0.1:3128
