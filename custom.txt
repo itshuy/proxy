@@ -1,13 +1,13 @@
 [Adblock Plus 2.0]
 !
 !-----------------------Custom advert blocking filters-----------------------!
-/ptracking*
-/api*
-/youtubei*
-/securepubads*
-/pagead*
-/pagead2*
+/ptracking.
+/api.
+/youtubei.
+/securepubads.
+/pagead.
+/pagead2.
 ||googlesyndication.com^
-/ads*
-/csi_204*
+/ads.
+/csi_204.
 /vi_webp/*
