@@ -2,8 +2,8 @@
 !
 !-----------------------Custom advert blocking filters-----------------------!
 /ptracking*
-/api/*
+/api/stats/*
 /youtubei*
-||securepubads.g.doubleclick.net^
+/securepubads*
 /pagead*
-||pagead2.googlesyndication.com^
+/pagead2*
