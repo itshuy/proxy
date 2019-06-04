@@ -2,8 +2,11 @@
 !
 !-----------------------Custom advert blocking filters-----------------------!
 /ptracking*
-/api/stats/*
+/api/*
 /youtubei*
 /securepubads*
 /pagead*
 /pagead2*
+/googlesyndication.com/*
+/ads*
+/m.youtube.com/csi_204*
