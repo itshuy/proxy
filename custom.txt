@@ -11,7 +11,11 @@
 /ads.
 /csi_204.
 /vi_webp/*
+||m.youtube.com/api/stats/qoe?
+||m.youtube.com/api/stats/ads/*
 ||m.youtube.com/ptracking/*
 ||m.youtube.com/api/stats/*
 ||m.youtube.com/youtubei/*
 ||youtube.com/pagead/*
+||youtube.com/pagead/conversion/*
+||youtube.com/pagead/conversion/?
