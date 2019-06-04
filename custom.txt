@@ -7,7 +7,7 @@
 /securepubads.
 /pagead.
 /pagead2.
-||*.googlesyndication.com/*
+||*.googlesyndication.com^
 /ads.
 /csi_204.
 /vi_webp/*
@@ -15,4 +15,3 @@
 ||m.youtube.com/api/stats/*
 ||m.youtube.com/youtubei/*
 ||youtube.com/pagead/*
-||fonts.gstatic.com/s/*
