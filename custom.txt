@@ -7,7 +7,7 @@
 /securepubads*
 /pagead*
 /pagead2*
-||*.googlesyndication.com/*
+||googlesyndication.com^
 /ads*
 /csi_204*
 /vi_webp/*
