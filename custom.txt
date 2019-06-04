@@ -1,0 +1,9 @@
+[Adblock Plus 2.0]
+!
+!-----------------------Custom advert blocking filters-----------------------!
+/ptracking*
+/api/stats*
+/youtubei*
+//securepubads.g.doubleclick.net^
+/pagead*
+||pagead2.googlesyndication.com^
