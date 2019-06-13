@@ -21,3 +21,5 @@
 ||youtube.com/pagead/conversion/?
 ||youtubei.googleapis.com
 ||redirector.googlevideo.com
+||ad.doubleclick.net
+||suggestqueries.google.com
