@@ -19,3 +19,4 @@
 ||youtube.com/pagead/*
 ||youtube.com/pagead/conversion/*
 ||youtube.com/pagead/conversion/?
+||youtubei.googleapis.com
