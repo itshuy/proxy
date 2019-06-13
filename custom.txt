@@ -20,3 +20,4 @@
 ||youtube.com/pagead/conversion/*
 ||youtube.com/pagead/conversion/?
 ||youtubei.googleapis.com
+||redirector.googlevideo.com
