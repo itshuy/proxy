@@ -1,25 +1,8 @@
-[Adblock Plus 2.0]
-!
-!-----------------------Custom advert blocking filters-----------------------!
-/ptracking.
-/api.
-/youtubei.
-/securepubads.
-/pagead.
-/pagead2.
-||*.googlesyndication.com^
-/ads.
-/csi_204.
-/vi_webp/*
-||m.youtube.com/api/stats/qoe?
-||m.youtube.com/api/stats/ads/*
-||m.youtube.com/ptracking/*
-||m.youtube.com/api/stats/*
-||m.youtube.com/youtubei/*
-||youtube.com/pagead/*
-||youtube.com/pagead/conversion/*
-||youtube.com/pagead/conversion/?
-||youtubei.googleapis.com
-||redirector.googlevideo.com
-||ad.doubleclick.net
-||suggestqueries.google.com
+i.ytimg.com
+data.flurry.com
+yt3.ggpht.com
+youtubei.googleapis.com
+www.googleadservices.com
+ade.googlesyndication.com
+play.googleapis.com
+manifest.googlevideo.com
