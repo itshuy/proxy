@@ -5,3 +5,4 @@
 0.0.0.0 ade.googlesyndication.com
 0.0.0.0 play.googleapis.com
 0.0.0.0 manifest.googlevideo.com
+0.0.0.0 pagead2.googlesyndication.com
