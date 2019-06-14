@@ -1,5 +1,5 @@
 0.0.0.0 data.flurry.com
-0.0.0.0 yt3.ggpht.com
+0.0.0.0 securepubads.g.doubleclick.net
 0.0.0.0 youtubei.googleapis.com
 0.0.0.0 googleadservices.com
 0.0.0.0 ade.googlesyndication.com
