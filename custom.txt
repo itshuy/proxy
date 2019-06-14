@@ -1,8 +1,7 @@
-0.0.0.0 i.ytimg.com
 0.0.0.0 data.flurry.com
 0.0.0.0 yt3.ggpht.com
 0.0.0.0 youtubei.googleapis.com
-0.0.0.0 www.googleadservices.com
+0.0.0.0 googleadservices.com
 0.0.0.0 ade.googlesyndication.com
 0.0.0.0 play.googleapis.com
 0.0.0.0 manifest.googlevideo.com
