@@ -1,8 +1,6 @@
 0.0.0.0 data.flurry.com
 0.0.0.0 securepubads.g.doubleclick.net
-0.0.0.0 youtubei.googleapis.com
 0.0.0.0 googleadservices.com
 0.0.0.0 ade.googlesyndication.com
 0.0.0.0 play.googleapis.com
 0.0.0.0 manifest.googlevideo.com
-0.0.0.0 pagead2.googlesyndication.com
