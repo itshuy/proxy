@@ -1,5 +1,21 @@
-0.0.0.0 data.flurry.com
-0.0.0.0 securepubads.g.doubleclick.net
-0.0.0.0 googleadservices.com
-0.0.0.0 ads.googlesyndication.com
-0.0.0.0 manifest.googlevideo.com
+aan.amazon-adsystem.com
+aax-us-east.amazon-adsystem.com
+aax-us-pdx.amazon-adsystem.com
+aax.amazon-adsystem.com
+amazon.co.uk
+amazon.com
+amazon.in
+amazonaws.com
+c.amazon-adsystem.com
+completion.amazon.co.uk
+fls-na.amazon.com
+mads.amazon-adsystem.com
+s.amazon-adsystem.com
+s3-ap-southeast-1.amazonaws.com
+s3-eu-west-1.amazonaws.com
+s3-us-west-2.amazonaws.com
+s3.amazonaws.com
+s3.ap-northeast-2.amazonaws.com
+s3.ap-south-1.amazonaws.co
+smile.amazon.com
+sqs.us-east-1.amazonaws.com
